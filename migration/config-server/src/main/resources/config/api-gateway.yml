@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: vets-service
+          uri: lb://vets-service
+          predicates:
+            - Path=/api/vets/**
+          filters:
+            - StripPrefix=1
+        - id: owners-service
+          uri: lb://owners-service
+          predicates:
+            - Path=/api/owners/**
+          filters:
+            - StripPrefix=1
+        - id: visits-service
+          uri: lb://visits-service
+          predicates:
+            - Path=/api/visits/**
+          filters:
+            - StripPrefix=1

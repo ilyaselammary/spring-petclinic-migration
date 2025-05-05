@@ -1,0 +1,185 @@
+version: '3.8'
+
+services:
+  config-server:
+    build: ./microservices/config-server
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    environment:
+      - SPRING_PROFILES_ACTIVE=native
+    volumes:
+      - ./microservices/config-server/src/main/resources/config:/config
+    networks:
+      - petclinic-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  discovery-server:
+    build: ./microservices/discovery-server
+    container_name: discovery-server
+    ports:
+      - "8761:8761"
+    depends_on:
+      config-server:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+    networks:
+      - petclinic-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api-gateway:
+    build: ./microservices/api-gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      discovery-server:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    networks:
+      - petclinic-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  owners-service:
+    build: ./microservices/owners-service
+    container_name: owners-service
+    depends_on:
+      discovery-server:
+        condition: service_healthy
+      owners-db:
+        condition: service_started
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://owners-db:3306/owners?useSSL=false
+      - SPRING_DATASOURCE_USERNAME=petclinic
+      - SPRING_DATASOURCE_PASSWORD=petclinic
+    networks:
+      - petclinic-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  vets-service:
+    build: ./microservices/vets-service
+    container_name: vets-service
+    depends_on:
+      discovery-server:
+        condition: service_healthy
+      vets-db:
+        condition: service_started
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://vets-db:3306/vets?useSSL=false
+      - SPRING_DATASOURCE_USERNAME=petclinic
+      - SPRING_DATASOURCE_PASSWORD=petclinic
+    networks:
+      - petclinic-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  visits-service:
+    build: ./microservices/visits-service
+    container_name: visits-service
+    depends_on:
+      discovery-server:
+        condition: service_healthy
+      visits-db:
+        condition: service_started
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://visits-db:3306/visits?useSSL=false
+      - SPRING_DATASOURCE_USERNAME=petclinic
+      - SPRING_DATASOURCE_PASSWORD=petclinic
+    networks:
+      - petclinic-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Bases de données
+  owners-db:
+    image: mysql:8.0
+    container_name: owners-db
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=petclinic
+      - MYSQL_DATABASE=owners
+      - MYSQL_USER=petclinic
+      - MYSQL_PASSWORD=petclinic
+    volumes:
+      - owners-db-data:/var/lib/mysql
+    networks:
+      - petclinic-network
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  vets-db:
+    image: mysql:8.0
+    container_name: vets-db
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=petclinic
+      - MYSQL_DATABASE=vets
+      - MYSQL_USER=petclinic
+      - MYSQL_PASSWORD=petclinic
+    volumes:
+      - vets-db-data:/var/lib/mysql
+    networks:
+      - petclinic-network
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  visits-db:
+    image: mysql:8.0
+    container_name: visits-db
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=petclinic
+      - MYSQL_DATABASE=visits
+      - MYSQL_USER=petclinic
+      - MYSQL_PASSWORD=petclinic
+    volumes:
+      - visits-db-data:/var/lib/mysql
+    networks:
+      - petclinic-network
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+networks:
+  petclinic-network:
+    driver: bridge
+
+volumes:
+  owners-db-data:
+  vets-db-data:
+  visits-db-data:
