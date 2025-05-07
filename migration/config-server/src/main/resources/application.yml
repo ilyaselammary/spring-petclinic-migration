@@ -8,6 +8,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/VOTRE_USERNAME/petclinic-config
+          uri: https://github.com/ilyaselammary/spring-petclinic-migration/tree/main/petclinic-config
           default-label: main
           clone-on-start: true
