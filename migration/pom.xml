@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.springframework.samples.petclinic</groupId>
+  <artifactId>petclinic-migration</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>petclinic-migration</name>
+  <description>Spring PetClinic Migration from Monolith to Microservices</description>
+
+  <modules>
+    <module>config-server</module>
+    <module>discovery-server</module>
+    <module>api-gateway</module>
+    <!-- Futurs modules à ajouter ici -->
+    <!-- <module>vets-service</module> -->
+    <!-- <module>visits-service</module> -->
+  </modules>
+
+  <properties>
+    <java.version>11</java.version>
+    <spring-boot.version>2.7.9</spring-boot.version>
+    <spring-cloud.version>2021.0.5</spring-cloud.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,249 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="10.20.1">
-<file name="C:\Users\asus\spring-petclinic\.devcontainer\devcontainer.json">
-</file>
-<file name="C:\Users\asus\spring-petclinic\.devcontainer\Dockerfile">
-</file>
-<file name="C:\Users\asus\spring-petclinic\.editorconfig">
-</file>
-<file name="C:\Users\asus\spring-petclinic\.gitattributes">
-</file>
-<file name="C:\Users\asus\spring-petclinic\.github\dco.yml">
-</file>
-<file name="C:\Users\asus\spring-petclinic\.github\workflows\deploy-and-test-cluster.yml">
-</file>
-<file name="C:\Users\asus\spring-petclinic\.github\workflows\gradle-build.yml">
-</file>
-<file name="C:\Users\asus\spring-petclinic\.github\workflows\maven-build.yml">
-</file>
 <file name="C:\Users\asus\spring-petclinic\.gitignore">
 </file>
-<file name="C:\Users\asus\spring-petclinic\.gitpod.yml">
+<file name="C:\Users\asus\spring-petclinic\LICENSE">
 </file>
-<file name="C:\Users\asus\spring-petclinic\.mvn\wrapper\maven-wrapper.properties">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\.gitattributes">
 </file>
-<file name="C:\Users\asus\spring-petclinic\build.gradle">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\.gitignore">
 </file>
-<file name="C:\Users\asus\spring-petclinic\docker-compose.yml">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\.mvn\wrapper\maven-wrapper.properties">
+<error line="9" column="6" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
 </file>
-<file name="C:\Users\asus\spring-petclinic\gradle\wrapper\gradle-wrapper.jar">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\Dockerfile">
 </file>
-<file name="C:\Users\asus\spring-petclinic\gradle\wrapper\gradle-wrapper.properties">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\HELP.md">
 </file>
-<file name="C:\Users\asus\spring-petclinic\gradlew">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\mvnw">
+<error line="11" column="7" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
 </file>
-<file name="C:\Users\asus\spring-petclinic\gradlew.bat">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\mvnw.cmd">
+<error line="11" column="10" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
 </file>
-<file name="C:\Users\asus\spring-petclinic\k8s\db.yml">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\pom.xml">
 </file>
-<file name="C:\Users\asus\spring-petclinic\k8s\petclinic.yml">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\src\main\java\org\springframework\samples\petclinic\microservices\api_gateway\ApiGatewayApplication.java">
 </file>
-<file name="C:\Users\asus\spring-petclinic\LICENSE.txt">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\src\main\java\org\springframework\samples\petclinic\microservices\api_gateway\config\RouteConfig.java">
 </file>
-<file name="C:\Users\asus\spring-petclinic\mvnw">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\src\main\resources\application.properties">
 </file>
-<file name="C:\Users\asus\spring-petclinic\mvnw.cmd">
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\src\main\resources\application.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\src\main\resources\bootstrap.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\api-gateway\src\test\java\org\springframework\samples\petclinic\microservices\api_gateway\ApiGatewayApplicationTests.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\.gitattributes">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\.gitignore">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\.mvn\wrapper\maven-wrapper.properties">
+<error line="9" column="6" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\Dockerfile">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\HELP.md">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\mvnw">
+<error line="11" column="7" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\mvnw.cmd">
+<error line="11" column="10" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\pom.xml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\src\main\java\org\springframework\samples\petclinic\microservices\config_server\ConfigServerApplication.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\src\main\resources\application.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\config-server\src\test\java\org\springframework\samples\petclinic\microservices\config_server\ConfigServerApplicationTests.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\.gitattributes">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\.gitignore">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\.mvn\wrapper\maven-wrapper.properties">
+<error line="9" column="6" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\Dockerfile">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\HELP.md">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\mvnw">
+<error line="11" column="7" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\mvnw.cmd">
+<error line="11" column="10" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\pom.xml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\src\main\java\org\springframework\samples\petclinic\microservices\discovery_server\DiscoveryServerApplication.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\src\main\resources\application.properties">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\src\main\resources\application.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\src\main\resources\bootstrap.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\discovery-server\src\test\java\org\springframework\samples\petclinic\microservices\discovery_server\DiscoveryServerApplicationTests.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\docker-compose.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\.gitattributes">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\.gitignore">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\.mvn\wrapper\maven-wrapper.properties">
+<error line="9" column="6" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\Dockerfile">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\HELP.md">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\mvnw">
+<error line="11" column="7" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\mvnw.cmd">
+<error line="11" column="10" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\pom.xml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\controller\OwnerController.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\controller\PetController.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\model\Owner.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\model\Pet.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\model\PetType.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\OwnersServiceApplication.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\repository\OwnerRepository.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\repository\PetRepository.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\repository\PetTypeRepository.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\Services\OwnerService.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\java\org\springframework\samples\petclinic\microservices\owners_service\Services\PetService.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\main\resources\application.properties">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\owners-service\src\test\java\org\springframework\samples\petclinic\microservices\owners_service\OwnersServiceApplicationTests.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\pom.xml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\.gitattributes">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\.gitignore">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\.mvn\wrapper\maven-wrapper.properties">
+<error line="9" column="6" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\Dockerfile">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\HELP.md">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\mvnw">
+<error line="11" column="7" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\mvnw.cmd">
+<error line="11" column="10" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\pom.xml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\controller\vetcontroller.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\controller\VisitController.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\DTOs\SpecialtyDTO.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\DTOs\VetDTO.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\model\Specialty.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\model\vet.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\model\visit.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\repository\SpecialtyRepository.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\repository\VetRepository.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\repository\VisitRepository.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\Service\VisitService.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\java\org\springframework\samples\petclinic\microservices\vets_service\VetsServiceApplication.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\main\resources\application.properties">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\vets-service\src\test\java\org\springframework\samples\petclinic\microservices\vets_service\VetsServiceApplicationTests.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\.gitattributes">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\.gitignore">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\.mvn\wrapper\maven-wrapper.properties">
+<error line="9" column="6" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\Dockerfile">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\HELP.md">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\mvnw">
+<error line="11" column="7" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\mvnw.cmd">
+<error line="11" column="10" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\pom.xml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\src\main\java\org\springframework\samples\petclinic\microservices\visits_service\VisitsServiceApplication.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\src\main\resources\application.properties">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration\visits-service\src\test\java\org\springframework\samples\petclinic\microservices\visits_service\VisitsServiceApplicationTests.java">
+</file>
+<file name="C:\Users\asus\spring-petclinic\migration.rar">
+</file>
+<file name="C:\Users\asus\spring-petclinic\petclinic-config\api-gateway.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\petclinic-config\application.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\petclinic-config\discovery-server.yml">
+</file>
+<file name="C:\Users\asus\spring-petclinic\petclinic-config\vets-service.yml">
 </file>
 <file name="C:\Users\asus\spring-petclinic\pom.xml">
 </file>
 <file name="C:\Users\asus\spring-petclinic\README.md">
 </file>
-<file name="C:\Users\asus\spring-petclinic\settings.gradle">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\checkstyle\nohttp-checkstyle-suppressions.xml">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\checkstyle\nohttp-checkstyle.xml">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\model\BaseEntity.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\model\NamedEntity.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\model\package-info.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\model\Person.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\Owner.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\OwnerController.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\OwnerRepository.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\Pet.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\PetController.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\PetType.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\PetTypeFormatter.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\PetValidator.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\Visit.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\owner\VisitController.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\PetClinicApplication.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\PetClinicRuntimeHints.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\system\CacheConfiguration.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\system\CrashController.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\system\WebConfiguration.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\system\WelcomeController.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\vet\Specialty.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\vet\Vet.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\vet\VetController.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\vet\VetRepository.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\java\org\springframework\samples\petclinic\vet\Vets.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\application-mysql.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\application-postgres.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\application.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\banner.txt">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\h2\data.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\h2\schema.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\hsqldb\data.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\hsqldb\schema.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\mysql\data.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\mysql\petclinic_db_setup_mysql.txt">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\mysql\schema.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\mysql\user.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\postgres\data.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\postgres\petclinic_db_setup_postgres.txt">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\db\postgres\schema.sql">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages_de.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages_en.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages_es.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages_fa.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages_ko.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages_pt.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages_ru.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\messages\messages_tr.properties">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\css\petclinic.css">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\fonts\montserrat-webfont.eot">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\fonts\montserrat-webfont.svg">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\fonts\montserrat-webfont.ttf">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\fonts\montserrat-webfont.woff">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\fonts\varela_round-webfont.eot">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\fonts\varela_round-webfont.svg">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\fonts\varela_round-webfont.ttf">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\fonts\varela_round-webfont.woff">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\images\favicon.png">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\images\pets.png">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\images\spring-logo-dataflow-mobile.png">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\images\spring-logo-dataflow.png">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\static\resources\images\spring-logo.svg">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\error.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\fragments\inputField.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\fragments\layout.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\fragments\selectField.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\owners\createOrUpdateOwnerForm.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\owners\findOwners.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\owners\ownerDetails.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\owners\ownersList.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\pets\createOrUpdatePetForm.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\pets\createOrUpdateVisitForm.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\vets\vetList.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\resources\templates\welcome.html">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\scss\header.scss">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\scss\petclinic.scss">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\scss\responsive.scss">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\main\scss\typography.scss">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\model\ValidatorTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\MySqlIntegrationTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\MysqlTestApplication.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\owner\OwnerControllerTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\owner\PetControllerTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\owner\PetTypeFormatterTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\owner\PetValidatorTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\owner\VisitControllerTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\PetClinicIntegrationTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\PostgresIntegrationTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\service\ClinicServiceTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\service\EntityUtils.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\system\CrashControllerIntegrationTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\system\CrashControllerTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\vet\VetControllerTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\java\org\springframework\samples\petclinic\vet\VetTests.java">
-</file>
-<file name="C:\Users\asus\spring-petclinic\src\test\jmeter\petclinic_test_plan.jmx">
+<file name="C:\Users\asus\spring-petclinic\spring-petclinic.iml">
 </file>
 </checkstyle>

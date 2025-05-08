@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$" dumb="true">
       <sourceFolder url="file://$MODULE_DIR$/migration/api-gateway/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/migration/config-server/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/migration/config-server/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/migration/discovery-server/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/migration/owners-service/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/migration/vets-service/src/main/java" isTestSource="false" />

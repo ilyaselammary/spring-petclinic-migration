@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8888  # Ajout du port explicitement
 
 spring:
   application:
@@ -8,6 +8,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ilyaselammary/spring-petclinic-migration/tree/main/petclinic-config
-          default-label: main
-          clone-on-start: true
+          uri: file:///C:/Users/asus/petclinic-config
+
