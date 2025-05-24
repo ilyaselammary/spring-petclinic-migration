@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.microservices.discovery_server;
+package com.example.discovery_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,5 +11,5 @@ public class DiscoveryServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DiscoveryServerApplication.class, args);
 	}
-
 }
+

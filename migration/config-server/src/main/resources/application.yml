@@ -1,12 +1,17 @@
+# config-server/src/main/resources/application.yml
 server:
-  port: 8888  # Ajout du port explicitement
+  port: 8888
 
 spring:
   application:
     name: config-server
+  profiles:
+    active: native  # ← SOLUTION: Mode natif, pas Git!
   cloud:
     config:
       server:
+        native:
+          search-locations: classpath:/config/  # Lire depuis classpath
         git:
-          uri: file:///C:/Users/asus/petclinic-config
+          uri: file:///tmp  # Fallback, pas utilisé en mode native
 

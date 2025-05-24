@@ -4,17 +4,16 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://discovery-server:8761/eureka/
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
 spring:
   cloud:
     gateway:
       routes:
+        - id: owners-service
+          uri: lb://owners-service
+          predicates:
+            - Path=/api/owners/**
         - id: vets-service
           uri: lb://vets-service
           predicates:
@@ -23,7 +22,3 @@ spring:
           uri: lb://visits-service
           predicates:
             - Path=/api/visits/**
-        - id: petclinic-monolith
-          uri: lb://petclinic-monolith
-          predicates:
-            - Path=/**

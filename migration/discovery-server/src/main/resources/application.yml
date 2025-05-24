@@ -1,11 +1,38 @@
+
 server:
   port: 8761
+
+spring:
+  application:
+    name: discovery-server
 
 eureka:
   instance:
     hostname: localhost
   client:
+    # This server is the registry, so it doesn't need to register with itself
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    # Disable self-preservation mode for development
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+
+# Actuator endpoints for monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+# Logging
+logging:
+  level:
+    com.netflix.eureka: INFO
+    com.netflix.discovery: INFO
+

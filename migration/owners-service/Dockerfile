@@ -1,9 +1,14 @@
-FROM ubuntu:latest
-LABEL authors="asus"
-
-ENTRYPOINT ["top", "-b"]
+# Dockerfile corrigé à utiliser pour TOUS les services
 FROM openjdk:17-jdk-alpine
-VOLUME /tmp
-ARG JAR_FILE
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+
+# Créer un répertoire app
+WORKDIR /app
+
+# Copier le jar (sera généré par Maven)
+COPY target/*.jar app.jar
+
+# Exposer le port (optionnel mais propre)
+EXPOSE 8080
+
+# Point d'entrée
+ENTRYPOINT ["java", "-jar", "app.jar"]

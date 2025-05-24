@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.microservices.discovery_server;
+package com.example.discovery_server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

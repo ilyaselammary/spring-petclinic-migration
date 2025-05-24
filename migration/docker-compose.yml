@@ -2,24 +2,24 @@ version: '3.8'
 
 services:
   config-server:
-    build: ./microservices/config-server
+    build: ./config-server
     container_name: config-server
     ports:
       - "8888:8888"
     environment:
       - SPRING_PROFILES_ACTIVE=native
-    volumes:
-      - ./microservices/config-server/src/main/resources/config:/config
+      - SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=classpath:/config
     networks:
       - petclinic-network
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8888/actuator/health"]
-      interval: 10s
-      timeout: 5s
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 60s
 
   discovery-server:
-    build: ./microservices/discovery-server
+    build: ./discovery-server
     container_name: discovery-server
     ports:
       - "8761:8761"
@@ -28,17 +28,17 @@ services:
         condition: service_healthy
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
     networks:
       - petclinic-network
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
-      interval: 10s
-      timeout: 5s
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 60s
 
   api-gateway:
-    build: ./microservices/api-gateway
+    build: ./api-gateway
     container_name: api-gateway
     ports:
       - "8080:8080"
@@ -53,12 +53,13 @@ services:
       - petclinic-network
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
-      interval: 10s
-      timeout: 5s
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 60s
 
   owners-service:
-    build: ./microservices/owners-service
+    build: ./owners-service
     container_name: owners-service
     depends_on:
       discovery-server:
@@ -75,13 +76,14 @@ services:
     networks:
       - petclinic-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD", "curl", "-f", "http://localhost:8081/actuator/health"]
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 60s
 
   vets-service:
-    build: ./microservices/vets-service
+    build: ./vets-service
     container_name: vets-service
     depends_on:
       discovery-server:
@@ -98,13 +100,14 @@ services:
     networks:
       - petclinic-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD", "curl", "-f", "http://localhost:8083/actuator/health"]
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 60s
 
   visits-service:
-    build: ./microservices/visits-service
+    build: ./visits-service
     container_name: visits-service
     depends_on:
       discovery-server:
@@ -121,12 +124,13 @@ services:
     networks:
       - petclinic-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD", "curl", "-f", "http://localhost:8082/actuator/health"]
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 60s
 
-  # Bases de données
+  # Databases
   owners-db:
     image: mysql:8.0
     container_name: owners-db
